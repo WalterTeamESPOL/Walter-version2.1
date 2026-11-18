@@ -1,0 +1,59 @@
+<svg id="walterFaceSvg" xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1000 850" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <filter id="softGlow" x="-30%" y="-50%" width="160%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="850" fill="#000000"/>
+
+  <g id="walterVector">
+    <!-- Ojo izquierdo cerrado -->
+    <g id="eyeL" class="eye" transform="translate(300 450)">
+      <path id="sleepEyeL" d="M-115 -8 Q0 88 115 -8"
+        fill="none" stroke="#1de4ff" stroke-width="25"
+        stroke-linecap="round" filter="url(#softGlow)"/>
+    </g>
+
+    <!-- Ojo derecho cerrado -->
+    <g id="eyeR" class="eye" transform="translate(700 450)">
+      <path id="sleepEyeR" d="M-115 -8 Q0 88 115 -8"
+        fill="none" stroke="#1de4ff" stroke-width="25"
+        stroke-linecap="round" filter="url(#softGlow)"/>
+    </g>
+
+    <!-- Boca cerrada -->
+    <g id="mouthGroup">
+      <path id="mouthClosed" d="M420 625 Q500 653 580 625"
+        fill="none" stroke="#1de4ff" stroke-width="17"
+        stroke-linecap="round"/>
+    </g>
+
+    <!-- Letras de sueño animadas -->
+    <g id="sleepZzz" fill="#1de4ff"
+      font-family="Arial, sans-serif" font-weight="bold">
+      <text x="814" y="330" font-size="30">z</text>
+      <text x="857" y="288" font-size="42">z</text>
+      <text x="916" y="236" font-size="55">Z</text>
+      <animate attributeName="opacity" values="0.4;1;0.4"
+        dur="2.5s" repeatCount="indefinite"/>
+    </g>
+
+    <!-- Mensaje de descanso -->
+    <text x="500" y="747" text-anchor="middle"
+      font-family="Arial, sans-serif" font-size="39"
+      font-weight="bold" fill="#e5fbff">
+      Walter está descansando...
+    </text>
+    <text x="500" y="790" text-anchor="middle"
+      font-family="Arial, sans-serif" font-size="23"
+      fill="#8eafba">
+      Volveremos a conversar pronto.
+    </text>
+  </g>
+</svg>
